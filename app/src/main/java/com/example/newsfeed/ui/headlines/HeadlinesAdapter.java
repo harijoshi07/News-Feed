@@ -50,7 +50,6 @@ public class HeadlinesAdapter extends RecyclerView.Adapter<HeadlinesAdapter.Head
         private final TextView titleText;
         private final TextView descriptionText;
         private final ImageView headlineImage;
-        private final ImageView sourceIcon;
         private final TextView sourceNameText;
         private final TextView publicationTimeText;
 
@@ -59,7 +58,6 @@ public class HeadlinesAdapter extends RecyclerView.Adapter<HeadlinesAdapter.Head
             titleText = itemView.findViewById(R.id.headlineTitleText);
             descriptionText = itemView.findViewById(R.id.headlineDescriptionText);
             headlineImage = itemView.findViewById(R.id.headlineImage);
-            sourceIcon = itemView.findViewById(R.id.sourceIcon);
             sourceNameText = itemView.findViewById(R.id.sourceNameText);
             publicationTimeText = itemView.findViewById(R.id.publicationTimeText);
         }
@@ -76,9 +74,9 @@ public class HeadlinesAdapter extends RecyclerView.Adapter<HeadlinesAdapter.Head
                     .centerCrop()
                     .into(headlineImage);
 
-            // Source icon and publication-time formatting are added in later steps.
-            sourceIcon.setImageDrawable(null);
-            publicationTimeText.setText("");
+            publicationTimeText.setText(
+                    PublicationTimeFormatter.format(article.getPublishedAt())
+            );
         }
     }
 }

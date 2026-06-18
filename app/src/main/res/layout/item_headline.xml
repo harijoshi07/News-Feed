@@ -68,8 +68,9 @@
             android:id="@+id/sourceIcon"
             android:layout_width="16dp"
             android:layout_height="16dp"
+            android:contentDescription="@string/source_icon_description"
             android:scaleType="fitCenter"
-            tools:background="#808080" />
+            android:src="@drawable/icon_rss_feed" />
 
         <TextView
             android:id="@+id/sourceNameText"
