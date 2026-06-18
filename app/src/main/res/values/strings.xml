@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">News Feed</string>
     <string name="source_icon_description">Article source</string>
+    <string name="loading_news">Loading news…</string>
 </resources>
