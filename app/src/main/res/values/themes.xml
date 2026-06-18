@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.NewsFeed" parent="Base.Theme.NewsFeed" />
+
+    <style name="ShapeAppearance.NewsFeed.HeadlineImage" parent="">
+        <item name="cornerSize">12dp</item>
+    </style>
 </resources>

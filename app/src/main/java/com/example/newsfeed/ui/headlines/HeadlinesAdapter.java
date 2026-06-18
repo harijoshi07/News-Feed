@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.newsfeed.R;
 import com.example.newsfeed.data.local.ArticleEntity;
 
@@ -68,8 +69,14 @@ public class HeadlinesAdapter extends RecyclerView.Adapter<HeadlinesAdapter.Head
             descriptionText.setText(article.getDescription());
             sourceNameText.setText(article.getSourceName());
 
-            // Placeholder drawables and publication-time formatting are added in later steps.
-            headlineImage.setImageDrawable(null);
+            Glide.with(headlineImage)
+                    .load(article.getImageUrl())
+                    .placeholder(R.drawable.article_image_placeholder)
+                    .error(R.drawable.article_image_placeholder)
+                    .centerCrop()
+                    .into(headlineImage);
+
+            // Source icon and publication-time formatting are added in later steps.
             sourceIcon.setImageDrawable(null);
             publicationTimeText.setText("");
         }

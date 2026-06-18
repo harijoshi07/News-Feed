@@ -75,6 +75,7 @@ dependencies {
     implementation(libs.lifecycle.livedata)
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.recyclerview)
+    implementation(libs.glide)
 
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
