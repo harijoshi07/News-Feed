@@ -1,4 +1,4 @@
-package com.example.newsfeed.data.model;
+package com.example.newsfeed.data.remote.model;
 
 public class SourceDto {
     private String id;

@@ -1,8 +1,8 @@
-package com.example.newsfeed.data.model;
+package com.example.newsfeed.data.remote.model;
 
 import java.util.List;
 
-public class TopHeadlinesDto {
+public class NewsResponseDto {
     private String status;
     private Integer totalResults;
     private List<ArticleDto> articles;
